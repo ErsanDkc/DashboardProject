@@ -4,11 +4,14 @@ import './index.css'
 import App from './App.jsx'
 import { AuthProvider } from './context/AuthContext'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { TopbarProvider } from './context/TopbarContext'
 const queryClient = new QueryClient()
 createRoot(document.getElementById('root')).render(
   <QueryClientProvider client={queryClient}>
     <AuthProvider>
-      <App />
+      <TopbarProvider>
+        <App />
+      </TopbarProvider>
     </AuthProvider>,
   </QueryClientProvider>
 )

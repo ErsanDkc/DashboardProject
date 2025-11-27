@@ -1,3 +1,4 @@
+import { useTopbarContext } from "@/context/TopbarContext";
 import { NavLink } from "react-router-dom";
 
 const menuItems = [
@@ -13,6 +14,10 @@ const bottomItems = [
 ];
 
 export default function Sidebar() {
+  const { setTopbarTitle } = useTopbarContext()
+  const handleNavClick = (name) => {
+    setTopbarTitle(name)
+  }
   return (
     <aside className="hidden md:block w-64 h-screen bg-[#FAFAFA] shadow flex flex-col justify-between">
       <div className="h-full">
@@ -28,6 +33,7 @@ export default function Sidebar() {
                   `flex items-center px-6 py-3 text-[#929EAE] rounded-lg  ${isActive ? "bg-[#C8EE44] text-black font-bold hover:bg-[#C8EE44]" : "hover:bg-lime-100"
                   }`
                 }
+                onClick={() => handleNavClick(item.name)}
               >
                 <img src={item.icon} className={`h-5 w-5 mr-3`} />
                 {item.name}
@@ -43,6 +49,7 @@ export default function Sidebar() {
                   `flex items-center px-6 py-3 text-[#929EAE] rounded-lg  ${isActive ? "bg-[#C8EE44] text-black font-bold hover:bg-[#C8EE44]" : "hover:bg-lime-100"
                   }`
                 }
+                onClick={() => handleNavClick(item.name)}
               >
                 <img src={item.icon} className={`h-5 w-5 mr-3`} />
                 {item.name}

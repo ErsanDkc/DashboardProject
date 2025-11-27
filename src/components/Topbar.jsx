@@ -13,10 +13,12 @@ import { ChevronDown, ChevronUp, User, Settings, LogOut } from "lucide-react"
 import { useState } from "react"
 import { useAuth } from "@/context/AuthContext"
 import { useNavigate } from "react-router-dom"
+import { useTopbarContext } from "@/context/TopbarContext"
 
 export function Topbar() {
   const [isOpen, setIsOpen] = useState(false)
   const { logout, user } = useAuth()
+  const {topbarTitle} = useTopbarContext()
   const navigate = useNavigate()
   const onLogout = async () => {
     logout()
@@ -27,7 +29,7 @@ export function Topbar() {
 
   return (
     <div className="flex items-center justify-between p-6 h-[48px] mb-[20px]">
-      <p className="font-semibold text-2xl text-[#1B212D]">Dashboard</p>
+      <p className="font-semibold text-2xl text-[#1B212D]">{topbarTitle}</p>
       <div className="flex items-center gap-4">
         <Button variant="ghost" size="icon" className="h-8 w-8">
           <img src="/search.svg" alt="searchIcon" className="h-4 w-4" />
