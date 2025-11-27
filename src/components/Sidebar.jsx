@@ -2,14 +2,14 @@ import { NavLink } from "react-router-dom";
 
 const menuItems = [
   { name: "Dashboard", icon: "/dashboard.svg", path: "/dashboard" },
-  { name: "Transactions", icon: "/transactions.svg", path: "#" },
-  { name: "Invoices", icon: "/invoices.svg", path: "#" },
-  { name: "My Wallets", icon: "/my-wallets.svg", path: "#" },
-  { name: "Settings", icon: "/settings.svg", path: "#" },
+  { name: "Transactions", icon: "/transactions.svg", path: "" },
+  { name: "Invoices", icon: "/invoices.svg", path: "" },
+  { name: "My Wallets", icon: "/my-wallets.svg", path: "" },
+  { name: "Settings", icon: "/settings.svg", path: "" },
 ];
 const bottomItems = [
-  { name: "Help", icon: "/help.svg", path: "#" },
-  { name: "Logout", icon: "/logout.svg", path: "#" },
+  { name: "Help", icon: "/help.svg", path: "" },
+  { name: "Logout", icon: "/logout.svg", path: "" },
 ];
 
 export default function Sidebar() {
