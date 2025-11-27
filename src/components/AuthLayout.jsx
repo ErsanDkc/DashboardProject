@@ -1,6 +1,6 @@
 // src/components/AuthLayout.jsx
-import clockHand from "../assets/clock-hand.svg";
-import MagloLogo from "../assets/maglo-logo.svg"; 
+import clockHand from "/clock-hand.svg";
+import MagloLogo from "/maglo-logo.svg"; 
 
 export default function AuthLayout({ children, title, subtitle }) {
   return (

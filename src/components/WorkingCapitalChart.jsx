@@ -33,9 +33,7 @@ const WorkingCapitalChart = () => {
                             <SelectValue />
                         </SelectTrigger>
                         <SelectContent className="bg-white border-[#F8F8F8]">
-                            <SelectItem value="7days">Last 7 days</SelectItem>
-                            <SelectItem value="month">Last month</SelectItem>
-                            <SelectItem value="year">Last year</SelectItem>
+                            <SelectItem value="last6Months">Son 6 Ay</SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
