@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // Projenin kök dizinini baz alır
+    "paths": {
+      // "@/..." şeklinde yapılan tüm içe aktarmaları "./src/..." olarak çöz
+      "@/*": ["./src/*"] 
+    }
+  }
+}

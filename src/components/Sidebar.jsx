@@ -1,0 +1,58 @@
+import { NavLink } from "react-router-dom";
+
+const menuItems = [
+  { name: "Dashboard", icon: "/src/assets/dashboard.svg", path: "/dashboard" },
+  { name: "Transactions", icon: "/src/assets/transactions.svg", path: "/transactions" },
+  { name: "Invoices", icon: "/src/assets/invoices.svg", path: "/invoices" },
+  { name: "My Wallets", icon: "/src/assets/my-wallets.svg", path: "/wallets" },
+  { name: "Settings", icon: "/src/assets/settings.svg", path: "/settings" },
+];
+const bottomItems = [
+  { name: "Help", icon: "/src/assets/help.svg", path: "/help" },
+  { name: "Logout", icon: "/src/assets/logout.svg", path: "/logout" },
+];
+
+export default function Sidebar() {
+  return (
+    <aside className="hidden md:block w-64 h-screen bg-[#FAFAFA] shadow flex flex-col justify-between">
+      <div className="h-full">
+        <div className="px-6 py-4 text-2xl font-bold">Maglo.</div>
+        <nav className="mt-6 flex h-[90%] flex-col justify-between ">
+          <div className="space-y-2">
+
+            {menuItems.map((item) => (
+              <NavLink
+                key={item.name}
+                to={item.path}
+                className={({ isActive }) =>
+                  `flex items-center px-6 py-3 text-[#929EAE] rounded-lg  ${isActive ? "bg-[#C8EE44] text-black font-bold hover:bg-[#C8EE44]" : "hover:bg-lime-100"
+                  }`
+                }
+              >
+                <img src={item.icon} className={`h-5 w-5 mr-3`} />
+                {item.name}
+              </NavLink>
+            ))}
+          </div>
+          <div className="space-y-2">
+            {bottomItems.map((item) => (
+              <NavLink
+                key={item.name}
+                to={item.path}
+                className={({ isActive }) =>
+                  `flex items-center px-6 py-3 text-[#929EAE] rounded-lg  ${isActive ? "bg-[#C8EE44] text-black font-bold hover:bg-[#C8EE44]" : "hover:bg-lime-100"
+                  }`
+                }
+              >
+                <img src={item.icon} className={`h-5 w-5 mr-3`} />
+                {item.name}
+              </NavLink>
+            ))}
+          </div>
+        </nav>
+      </div>
+
+
+    </aside>
+  );
+}
