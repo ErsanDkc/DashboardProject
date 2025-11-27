@@ -2,13 +2,13 @@ import { NavLink } from "react-router-dom";
 
 const menuItems = [
   { name: "Dashboard", icon: "/dashboard.svg", path: "/dashboard" },
-  { name: "Transactions", icon: "/transactions.svg", path: "dashboard" },
-  { name: "Invoices", icon: "/invoices.svg", path: "dashboard" },
-  { name: "My Wallets", icon: "/my-wallets.svg", path: "dashboard" },
-  { name: "Settings", icon: "/settings.svg", path: "dashboard" },
+  { name: "Transactions", icon: "/transactions.svg", path: "/transactions" },
+  { name: "Invoices", icon: "/invoices.svg", path: "/invoices" },
+  { name: "My Wallets", icon: "/my-wallets.svg", path: "/wallets" },
+  { name: "Settings", icon: "/settings.svg", path: "/settings" },
 ];
 const bottomItems = [
-  { name: "Help", icon: "/help.svg", path: "dashboard" },
+  { name: "Help", icon: "/help.svg", path: "/help" },
   { name: "Logout", icon: "/logout.svg", path: "/signin" },
 ];
 
