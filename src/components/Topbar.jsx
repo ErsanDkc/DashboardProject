@@ -30,10 +30,10 @@ export function Topbar() {
       <p className="font-semibold text-2xl text-[#1B212D]">Dashboard</p>
       <div className="flex items-center gap-4">
         <Button variant="ghost" size="icon" className="h-8 w-8">
-          <img src="/src/assets/search.svg" alt="searchIcon" className="h-4 w-4" />
+          <img src="/search.svg" alt="searchIcon" className="h-4 w-4" />
         </Button>
         <Button variant="ghost" size="icon" className="relative h-8 w-8">
-          <img src="/src/assets/notification.svg" alt="notification" className="h-4 w-4" />
+          <img src="/notification.svg" alt="notification" className="h-4 w-4" />
           <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 rounded-full text-xs text-white flex items-center justify-center">
             3
           </span>
@@ -42,7 +42,7 @@ export function Topbar() {
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="flex items-center gap-2 p-2 h-auto bg-[#FAFAFA] text-black rounded-full hover:bg-gray-200">
               <Avatar className="h-8 w-8">
-                <AvatarImage src="/src/assets/avatar.svg" alt="User" />
+                <AvatarImage src="/avatar.svg" alt="User" />
                 {/* <AvatarFallback>MN</AvatarFallback> */}
               </Avatar>
               <div className="flex flex-col items-start">

@@ -26,16 +26,16 @@ const WalletComp = () => {
                     </div>
                     <div className="flex w-full justify-between items-center gap-3">
                         <div className="w-10 h-8 rounded-md bg-[rgba(255,255,255,0.12)] flex items-center justify-center">
-                            <img src="/src/assets/chip.svg" className="w-6 h-4 rounded-sm " />
+                            <img src="/chip.svg" className="w-6 h-4 rounded-sm " />
                         </div>
                         <div className="flex items-center justify-center">
-                            <img src="/src/assets/contactless.svg" className="w-7 h-7 rounded-sm" />
+                            <img src="/contactless.svg" className="w-7 h-7 rounded-sm" />
                         </div>
                     </div>
                     <div className="mt-4 text-[18px] md:text-lg tracking-[0.3em] font-semibold">{firstCard?.cardNumber}</div>
                 </div>
                 <div className="w-full rounded-md flex items-center justify-end pt-3">
-                    <img src="/src/assets/international.svg" className="w-6 h-4 rounded-sm" />
+                    <img src="/international.svg" className="w-6 h-4 rounded-sm" />
                 </div>
             </div>
 
@@ -48,10 +48,10 @@ const WalletComp = () => {
                             <div className="flex w-full justify-between items-center gap-3">
                                 {/* chip placeholder */}
                                 <div className="w-10 h-8  rounded-md flex items-center justify-center">
-                                    <img src="/src/assets/chip.svg" className="w-6 h-4 rounded-sm " />
+                                    <img src="/chip.svg" className="w-6 h-4 rounded-sm " />
                                 </div>
                                 <div className="flex items-center justify-center">
-                                    <img src="/src/assets/contactless.svg" className="w-5 h-5 rounded-sm" />
+                                    <img src="/contactless.svg" className="w-5 h-5 rounded-sm" />
                                 </div>
                             </div>
 
