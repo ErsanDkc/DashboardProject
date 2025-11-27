@@ -2,6 +2,7 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 import ProtectedRoute from "./ProtectedRoute";
+import ErrorPage from "@/components/Error";
 
 const SignIn = lazy(() => import("../pages/SingIn"));
 const SignUp = lazy(() => import("../pages/SignUp"));
@@ -15,21 +16,23 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Navigate to="/signin" replace />,
+    errorElement: <ErrorPage />
   },
 
   {
     element: <ProtectedRoute />,
+    errorElement: <ErrorPage />,
     children: [
       {
         element: (<MainLayout />),
         children: [
-          { path: "/dashboard", element: (<Dashboard />) },
-          { path: "/transactions", element: (<ComingSoon />) },
-          { path: "/invoices", element: (<ComingSoon />) },
-          { path: "/wallets", element: (<ComingSoon />) },
-          { path: "/settings", element: (<ComingSoon />) },
-          { path: "/help", element: (<ComingSoon />) },
-          { path: "/logout", element: (<ComingSoon />) },
+          { path: "/dashboard", element: <Dashboard /> },
+          { path: "/transactions", element: <ComingSoon /> },
+          { path: "/invoices", element: <ComingSoon /> },
+          { path: "/wallets", element: <ComingSoon /> },
+          { path: "/settings", element: <ComingSoon /> },
+          { path: "/help", element: <ComingSoon /> },
+          { path: "/logout", element: <ComingSoon /> },
         ],
       },
     ],
